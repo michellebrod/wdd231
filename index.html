@@ -1,11 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio acadêmico de Michelle Amorim: projetos de desenvolvimento web e cursos do certificado de Programação Web e Computadores.">
+  <meta name="author" content="Michelle Amorim">
+  <meta name="theme-color" content="#15334a">
+  <title>Página Inicial | Michelle Amorim | WDD 231</title>
+  <link rel="icon" href="imagens/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/telas-pequenas.css">
+  <link rel="stylesheet" href="estilos/telas-grandes.css">
+  <script src="scripts/navegacao.js" defer></script>
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/curso.js" defer></script>
 </head>
 <body>
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+      <a class="marca" href="index.html" aria-label="Página inicial de Michelle Amorim">
+        <img src="imagens/logo.svg" alt="" width="56" height="56">
+        <span>Michelle Amorim</span>
+      </a>
+      <button type="button" id="botao-menu" class="botao-menu" aria-label="Abrir menu de navegação" aria-controls="menu-principal" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  <nav class="navegacao" aria-label="Navegação principal">
+    <ul id="menu-principal" class="menu-principal">
+      <li><a href="index.html" class="ativo" aria-current="page">Página Inicial</a></li>
+      <li><a href="camara/" >Projeto da Câmara</a></li>
+      <li><a href="projeto-final/">Projeto Final</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Página Inicial</h1>
+    <div class="apresentacao">
+      <section class="painel sobre">
+        <h2>Sobre Mim</h2>
+        <div class="painel-corpo texto-sobre">
+          <p>Olá! Sou Michelle Amorim, estudante de Desenvolvimento Web pela BYU–Pathway Worldwide. Gosto de aprender novas tecnologias e transformar ideias em páginas úteis, acessíveis e agradáveis de navegar.</p>
+          <p>Neste portfólio, compartilho meus projetos e meu progresso nos cursos de programação e desenvolvimento web.</p>
+        </div>
+      </section>
+      <section class="painel foto">
+        <h2>Foto da Estudante</h2>
+        <div class="painel-corpo foto-conteudo">
+          <img src="imagens/perfil.jpeg" alt="Foto de Michelle Amorim" width="180" height="180">
+        </div>
+      </section>
+    </div>
+
+    <section class="painel certificados" aria-labelledby="titulo-cursos">
+      <h2 id="titulo-cursos">Cursos de Certificação Web</h2>
+      <div class="painel-corpo">
+        <div class="filtros" role="group" aria-label="Filtrar cursos por área">
+          <button type="button" data-filtro="Todos" class="filtro ativo" aria-pressed="true">Todos</button>
+          <button type="button" data-filtro="CSE" class="filtro" aria-pressed="false">CSE</button>
+          <button type="button" data-filtro="WDD" class="filtro" aria-pressed="false">WDD</button>
+        </div>
+        <div id="lista-cursos" class="lista-cursos" aria-live="polite"></div>
+        <p class="creditos" id="total-creditos" aria-live="polite"></p>
+        <p class="legenda"><span class="bolinha concluido"></span> Concluído <span class="bolinha pendente"></span> Em andamento / pendente</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="redes-sociais" aria-label="Redes sociais">
     
+      <a href="https://github.com/michellebrod/wdd231" target="_blank" rel="noopener noreferrer" aria-label="GitHub (perfil pessoal)"><img src="imagens/github.svg" width="34" height="34" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/michelle-barbosa-rodrigues-amorim-a232bb17/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (perfil pessoal)"><img src="imagens/linkedin.svg" width="34" height="34" alt="LinkedIn"></a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube (configurar perfil pessoal)"><img src="imagens/youtube.svg" width="34" height="34" alt="YouTube"></a>
+    </div>
+    <p>© <span id="anoAtual"></span> · Michelle Amorim · São Paulo, Brasil</p>
+    <p id="ultimaModificacao"></p>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,14 @@
+@media screen and (min-width: 640px) {
+  .botao-menu { display:none; }
+  .menu-principal, .menu-principal.aberto { display:flex; }
+  .menu-principal li { flex:1; }
+  .menu-principal a { text-align:center; border-bottom:0; padding:13px 10px; }
+  .apresentacao { grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); }
+  .painel.sobre, .painel.foto { min-height:330px; }
+  .lista-cursos { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media screen and (min-width: 900px) {
+  .cabecalho-conteudo { padding:16px 20px; }
+  .painel-corpo { padding:24px; }
+  .painel.sobre, .painel.foto { min-height:370px; }
+}
