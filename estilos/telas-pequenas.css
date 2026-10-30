@@ -1,4 +1,3 @@
-/* Estilos base (mobile first): 320px ou mais. */
 :root { --azul:#15334a; --azul-escuro:#0d2538; --verde:#1f674e; --claro:#f2f5f7; --cinza:#e4e8ec; --texto:#1d2933; --branco:#fff; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -11,7 +10,7 @@ a:focus-visible, button:focus-visible { outline:3px solid #c04d13; outline-offse
 .marca { display:flex; align-items:center; gap:14px; font-size:1.2rem; font-weight:800; text-decoration:none; color:var(--azul); }
 .marca img { flex:none; }
 .botao-menu { background:var(--azul); color:#fff; border:1px solid var(--azul); border-radius:6px; min-width:44px; min-height:44px; font-size:1.6rem; cursor:pointer; }
-.navegacao { background:var(--azul-escuro); }
+.navegacao { background-color: var(--azul-escuro); color: #ffffff; }
 .menu-principal { max-width:1120px; padding:0; margin:0 auto; list-style:none; display:none; }
 .menu-principal.aberto { display:block; }
 .menu-principal a { display:block; padding:13px 20px; text-decoration:none; font-weight:700; color:#fff; border-bottom:1px solid #435567; }
