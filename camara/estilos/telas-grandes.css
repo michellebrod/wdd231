@@ -10,12 +10,7 @@
     }
 
     .membros.lista .cartao-conteudo {
-        grid-template-columns:
-            minmax(160px, 1.2fr)
-            minmax(100px, .8fr)
-            minmax(160px, 1.4fr)
-            minmax(110px, 1fr);
-
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: center;
     }
 
@@ -34,12 +29,12 @@
         display: none;
     }
 
-    .navegacao {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        background-color: var(--azul-escuro);
-        color: var(--branco);
+    nav.navegacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #0d2538;
+    color: #ffffff;
     }
 
     .menu-principal {
@@ -94,4 +89,12 @@
     .cartao img {
         height: 184px;
     }
+
+    .membros.lista .cartao-conteudo {
+        grid-template-columns:
+        minmax(160px, 1.2fr)
+        minmax(100px, .8fr)
+        minmax(160px, 1.4fr)
+        minmax(110px, 1fr);
+}
 }

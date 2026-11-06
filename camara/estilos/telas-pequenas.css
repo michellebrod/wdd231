@@ -88,15 +88,16 @@ button:focus-visible {
     line-height: 1;
 }
 
-.navegacao {
+nav.navegacao {
     display: flex;
     flex-direction: column;
-    background-color: var(--azul-escuro);
-    color: var(--branco);
+    background-color: #0d2538;
+    color: #ffffff;
 }
 
-.navegacao a {
-    color: var(--branco);
+nav.navegacao .menu-principal a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .menu-principal {
