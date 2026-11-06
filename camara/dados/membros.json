@@ -1,0 +1,82 @@
+[
+  {
+    "nome": "Café Ipê Amarelo",
+    "segmento": "Cafeteria e confeitaria",
+    "endereco": "Rua Marechal Deodoro, 620 - Centro",
+    "telefone": "(11) 4000-1001",
+    "site": "https://example.com/cafe-ipe",
+    "imagem": "cafe-ipe.svg",
+    "nivel": 2,
+    "descricao": "Café artesanal e encontros de bairro."
+  },
+  {
+    "nome": "TecNova Soluções",
+    "segmento": "Tecnologia e inovação",
+    "endereco": "Av. Lucas Nogueira Garcez, 900 - Jardim do Mar",
+    "telefone": "(11) 4000-1002",
+    "site": "https://example.com/tecnova",
+    "imagem": "tecnova.svg",
+    "nivel": 3,
+    "descricao": "Serviços digitais para pequenos negócios."
+  },
+  {
+    "nome": "Viva Verde Paisagismo",
+    "segmento": "Casa e jardim",
+    "endereco": "Rua Jurubatuba, 310 - Centro",
+    "telefone": "(11) 4000-1003",
+    "site": "https://example.com/viva-verde",
+    "imagem": "viva-verde.svg",
+    "nivel": 1,
+    "descricao": "Paisagismo e soluções sustentáveis."
+  },
+  {
+    "nome": "Oficina Horizonte",
+    "segmento": "Serviços automotivos",
+    "endereco": "Av. Piraporinha, 1250 - Planalto",
+    "telefone": "(11) 4000-1004",
+    "site": "https://example.com/oficina-horizonte",
+    "imagem": "oficina-horizonte.svg",
+    "nivel": 2,
+    "descricao": "Manutenção preventiva e atendimento próximo."
+  },
+  {
+    "nome": "Livraria Travessia",
+    "segmento": "Livros e cultura",
+    "endereco": "Rua Santa Filomena, 480 - Centro",
+    "telefone": "(11) 4000-1005",
+    "site": "https://example.com/livraria-travessia",
+    "imagem": "livraria-travessia.svg",
+    "nivel": 1,
+    "descricao": "Literatura, papelaria e oficinas culturais."
+  },
+  {
+    "nome": "Ateliê Aurora",
+    "segmento": "Moda e design",
+    "endereco": "Rua Frei Gaspar, 210 - Centro",
+    "telefone": "(11) 4000-1006",
+    "site": "https://example.com/atelie-aurora",
+    "imagem": "atelie-aurora.svg",
+    "nivel": 3,
+    "descricao": "Design autoral e produção local."
+  },
+  {
+    "nome": "Clínica Bem Viver",
+    "segmento": "Saúde e bem-estar",
+    "endereco": "Av. Caminho do Mar, 870 - Rudge Ramos",
+    "telefone": "(11) 4000-1007",
+    "site": "https://example.com/bem-viver",
+    "imagem": "bem-viver.svg",
+    "nivel": 2,
+    "descricao": "Cuidado integrado e acolhimento."
+  },
+  {
+    "nome": "Mercado Raízes",
+    "segmento": "Alimentos e mercado",
+    "endereco": "Rua dos Vianas, 150 - Baeta Neves",
+    "telefone": "(11) 4000-1008",
+    "site": "https://example.com/mercado-raizes",
+    "imagem": "mercado-raizes.svg",
+    "nivel": 3,
+    "descricao": "Produtos regionais e produtores independentes."
+  }
+]

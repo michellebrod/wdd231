@@ -1,0 +1,2 @@
+/* Normalização básica local: carregada antes dos estilos do projeto. */
+*,*::before,*::after{box-sizing:border-box}html{line-height:1.5;-webkit-text-size-adjust:100%}body{margin:0}button,input{font:inherit}img{max-width:100%;display:block}a{color:inherit}h1,h2,h3,p{margin-top:0}ul{margin:0;padding:0}button{cursor:pointer}

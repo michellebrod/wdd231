@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça empresas associadas à Câmara de Comércio de São Bernardo do Campo. Encontre serviços, parceiros e oportunidades para fortalecer o comércio local.">
+  <meta name="author" content="Michelle Barbosa Rodrigues Amorim">
+  <meta name="theme-color" content="#15334a">
+  <title>Diretório de Empresas | Câmara de Comércio de São Bernardo do Campo</title>
+  <meta property="og:title" content="Diretório de Empresas | Câmara de Comércio de São Bernardo do Campo">
+  <meta property="og:description" content="Explore empresas da comunidade, descubra serviços e fortaleça os negócios de São Bernardo do Campo. Projeto acadêmico WDD 231.">
+  <meta property="og:image" content="https://michellebrod.github.io/wdd231/camara/imagens/compartilhamento.webp">
+  <meta property="og:url" content="https://michellebrod.github.io/wdd231/camara/diretorio.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/telas-pequenas.css">
+  <link rel="stylesheet" href="estilos/telas-grandes.css">
+  <script src="scripts/navegacao.js" defer></script>
+  <script src="scripts/datas.js" defer></script>
+  <script src="scripts/diretorio.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+  <header class="cabecalho">
+    <div class="topo">
+      <a href="diretorio.html" class="marca" aria-label="Câmara de Comércio de São Bernardo do Campo - diretório">
+        <img src="imagens/logo.svg" alt="" width="58" height="58">
+        <div><strong>Câmara de Comércio</strong><span>São Bernardo do Campo</span></div>
+      </a>
+      <button id="botao-menu" class="botao-menu" type="button" aria-label="Abrir menu de navegação" aria-controls="menu-principal" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  <nav class="navegacao" aria-label="Navegação principal">
+    <ul class="menu-principal" id="menu-principal">
+      <li><a href="index.html">Página Inicial</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="diretorio.html" aria-current="page">Diretório</a></li>
+      <li><a href="associar.html">Associe-se</a></li>
+    </ul>
+  </nav>
+  <main id="conteudo">
+    <section class="intro" aria-labelledby="titulo-diretorio">
+      <p class="eyebrow">Nossa comunidade empresarial</p>
+      <h1 id="titulo-diretorio">Diretório de empresas</h1>
+      <p>Encontre negócios, serviços e parceiros que movimentam São Bernardo do Campo. Conexões locais para fortalecer nossa região.</p>
+    </section>
+    <p class="aviso">Projeto acadêmico: as empresas, os contatos e os endereços apresentados neste diretório são fictícios, para demonstração.</p>
+    <div class="barra">
+      <h2 id="titulo-membros">Nossos associados</h2>
+      <div class="alternancia" role="group" aria-label="Modo de visualização dos associados">
+        <button type="button" data-visualizacao="grade" aria-pressed="true">▦ Grade</button>
+        <button type="button" data-visualizacao="lista" aria-pressed="false">☷ Lista</button>
+      </div>
+    </div>
+    <p id="status-membros" class="status" role="status" aria-live="polite">Carregando empresas...</p>
+    <section id="membros" class="membros" aria-labelledby="titulo-membros"></section>
+  </main>
+  <footer class="rodape">
+    <div class="rodape-grid">
+      <div><h2>Câmara de Comércio de São Bernardo do Campo</h2><p>São Bernardo do Campo, São Paulo, Brasil</p><p class="nota">Projeto educacional fictício, sem vínculo com uma câmara real.</p></div>
+      <div><h2>Contato do projeto</h2><p>Atendimento demonstrativo</p><p>Para fins acadêmicos WDD 231</p></div>
+      <div><h2>Sobre o desenvolvimento</h2><p>Michelle Barbosa Rodrigues Amorim</p><p>WDD 231 · Desenvolvimento Web</p><p><a href="../index.html">Voltar ao portfólio</a></p></div>
+    </div>
+    <div class="copyright"><p>© <span id="anoAtual"></span> Câmara de Comércio de São Bernardo do Campo · Michelle Barbosa Rodrigues Amorim · WDD 231</p><p id="ultimaModificacao"></p></div>
+  </footer>
+</body>
+</html>
