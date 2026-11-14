@@ -14,7 +14,6 @@ body {
     font-family: "Nunito Sans", Arial, sans-serif;
     color: var(--texto);
     background-color: var(--claro);
-    min-width: 320px;
 }
 
 a:focus-visible,
@@ -119,13 +118,11 @@ nav.navegacao {
 .menu-principal a:hover,
 .menu-principal a:focus-visible {
     background-color: #2a5064;
-    color: var(--branco);
 }
 
 .menu-principal a[aria-current="page"] {
     border-left-color: #e9c784;
     background-color: #244b61;
-    color: var(--branco);
 }
 
 main {
@@ -387,7 +384,6 @@ main {
 }
 
 .hero-conteudo {
-    color: var(--branco);
     max-width: 670px;
     padding: 2rem 1.4rem 2.3rem;
 }
@@ -405,7 +401,6 @@ main {
     line-height: 1.07;
     letter-spacing: -.025em;
     margin: .65rem 0 1rem;
-    color: var(--branco);
 }
 
 .hero p {
@@ -432,7 +427,6 @@ main {
 
 .botao-cta:hover {
     background-color: #ffe1aa;
-    color: #152a38;
 }
 
 .home-grid {
@@ -645,7 +639,6 @@ main {
 }
 
 .destaque-cartao img {
-    display: block;
     width: 100%;
     height: 165px;
     object-fit: cover;
