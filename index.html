@@ -3,108 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bem-vindo à Câmara de Comércio de São Bernardo do Campo. Descubra eventos, previsão do tempo, empresas em destaque e oportunidades de associação.">
-  <meta name="author" content="Michelle Barbosa Rodrigues Amorim">
+  <meta name="description" content="Portfólio acadêmico de Michelle Amorim: projetos de desenvolvimento web e cursos do certificado de Programação Web e Computadores.">
+  <meta name="author" content="Michelle Amorim">
   <meta name="theme-color" content="#15334a">
-  <title>Página Inicial | Câmara de Comércio de São Bernardo do Campo</title>
-  <meta property="og:title" content="Câmara de Comércio de São Bernardo do Campo | Página Inicial">
-  <meta property="og:description" content="Conheça nossa comunidade empresarial, acompanhe eventos locais e descubra associados em destaque. Projeto acadêmico WDD 231.">
-  <meta property="og:image" content="https://michellebrod.github.io/wdd231/camara/imagens/compartilhamento.webp">
-  <meta property="og:url" content="https://michellebrod.github.io/wdd231/camara/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
-  <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+<meta property="og:title" content="Página Inicial | Michelle Amorim | WDD 231">
+<meta property="og:description" content="Conheça meu portfólio acadêmico de desenvolvimento web. Explore meus projetos, cursos de programação e minha jornada de aprendizado na BYU–Pathway Worldwide.">
+<meta property="og:image" content="https://michellebrod.github.io/wdd231/imagens/preview.webp">
+<meta property="og:url" content="https://michellebrod.github.io/wdd231/">
+
+  <title>Página Inicial | Michelle Amorim | WDD 231</title>
+  <link rel="icon" href="imagens/favicon.ico" sizes="any">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos/normalize.css">
+
   <link rel="stylesheet" href="estilos/telas-pequenas.css">
   <link rel="stylesheet" href="estilos/telas-grandes.css">
+ 
   <script src="scripts/navegacao.js" defer></script>
-  <script src="scripts/datas.js" defer></script>
-  <script src="scripts/clima.js" defer></script>
-  <script src="scripts/destaques.js" defer></script>
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/curso.js" defer></script>
 </head>
 <body>
-  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
   <header class="cabecalho">
-    <div class="topo">
-      <a href="index.html" class="marca" aria-label="Câmara de Comércio de São Bernardo do Campo - página inicial">
-        <img src="imagens/logo.svg" alt="" width="58" height="58">
-        <div><strong>Câmara de Comércio</strong><span>São Bernardo do Campo</span></div>
+    <div class="cabecalho-conteudo">
+      <a class="marca" href="index.html" aria-label="Página inicial de Michelle Amorim">
+        <img src="imagens/logo.svg" alt="" width="56" height="56">
+        <span>Michelle Amorim</span>
       </a>
-      <button id="botao-menu" class="botao-menu" type="button" aria-label="Abrir menu de navegação" aria-controls="menu-principal" aria-expanded="false">☰</button>
+      <button type="button" id="botao-menu" class="botao-menu" aria-label="Abrir menu de navegação" aria-controls="menu-principal" aria-expanded="false">☰</button>
     </div>
   </header>
   <nav class="navegacao" aria-label="Navegação principal">
-    <ul class="menu-principal" id="menu-principal">
-      <li><a href="index.html" aria-current="page">Página Inicial</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="diretorio.html">Diretório</a></li>
-      <li><a href="associar.html">Associe-se</a></li>
+    <ul id="menu-principal" class="menu-principal">
+      <li><a href="index.html" class="ativo" aria-current="page">Página Inicial</a></li>
+      <li><a href="camara/" >Projeto da Câmara</a></li>
+      <li><a href="projeto-final/">Projeto Final</a></li>
     </ul>
   </nav>
 
-  <main id="conteudo" class="home">
-    <section class="hero" aria-labelledby="titulo-home">
-      <img class="hero-imagem" src="imagens/sao-bernardo-hero.webp" width="1440" height="650" alt="Ilustração da paisagem urbana de São Bernardo do Campo, com edifícios, árvores e uma torre central" fetchpriority="high">
-      <div class="hero-conteudo">
-        <span class="hero-chamada">Conectando negócios e pessoas</span>
-        <h1 id="titulo-home">O futuro do comércio começa aqui.</h1>
-        <p>Valorizamos quem empreende em São Bernardo do Campo. Conecte-se à comunidade, descubra oportunidades e fortaleça o comércio local.</p>
-        <a class="botao-cta" href="associar.html">Quero me associar <span aria-hidden="true">→</span></a>
-      </div>
-    </section>
-
-    <p class="aviso">Projeto acadêmico fictício: empresas, contatos e eventos apresentados são exemplos de demonstração, não informações oficiais.</p>
-
-    <div class="home-grid">
-      <section class="home-painel eventos" aria-labelledby="titulo-eventos">
-        <div class="secao-topo"><span class="indicador-secao">01 / Comunidade</span><h2 id="titulo-eventos">Eventos e oportunidades</h2></div>
-        <div class="evento-lista">
-          <article class="evento-item">
-            <div class="evento-selo" aria-hidden="true"><span>NEG</span><strong>01</strong></div>
-            <div><h3>Encontro de empreendedores</h3><p>Conexões entre negócios locais e troca de experiências.</p><span class="evento-categoria">Evento ilustrativo · data a definir</span></div>
-          </article>
-          <article class="evento-item">
-            <div class="evento-selo" aria-hidden="true"><span>CAP</span><strong>02</strong></div>
-            <div><h3>Oficina de marketing digital</h3><p>Ideias e ferramentas para ampliar a presença da sua empresa.</p><span class="evento-categoria">Evento ilustrativo · data a definir</span></div>
-          </article>
-          <article class="evento-item">
-            <div class="evento-selo" aria-hidden="true"><span>COM</span><strong>03</strong></div>
-            <div><h3>Feira de negócios e serviços</h3><p>Um espaço de apresentação de produtos e novas parcerias.</p><span class="evento-categoria">Evento ilustrativo · data a definir</span></div>
-          </article>
+  <main>
+    <h1>Página Inicial</h1>
+    <div class="apresentacao">
+      <section class="painel sobre">
+        <h2>Sobre Mim</h2>
+        <div class="painel-corpo texto-sobre">
+          <p>Olá! Sou Michelle Amorim, estudante de Desenvolvimento Web pela BYU–Pathway Worldwide. Gosto de aprender novas tecnologias e transformar ideias em páginas úteis, acessíveis e agradáveis de navegar.</p>
+          <p>Neste portfólio, compartilho meus projetos e meu progresso nos cursos de programação e desenvolvimento web.</p>
         </div>
       </section>
-
-      <section class="home-painel clima" aria-labelledby="titulo-clima">
-        <div class="secao-topo"><span class="indicador-secao">02 / São Bernardo</span><h2 id="titulo-clima">Tempo na cidade</h2></div>
-        <div id="clima-atual" class="clima-atual" role="status" aria-live="polite"><p>Configure a chave da OpenWeatherMap para ver a temperatura atual.</p></div>
-        <h3 class="clima-subtitulo">Próximos 3 dias <span>(aprox. 12h)</span></h3>
-        <div id="previsao-tres-dias" class="previsao" aria-live="polite"><p>Aguardando dados da API.</p></div>
-        <p class="fonte-clima">Dados: <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a> · Temperaturas em °C</p>
+      <section class="painel foto">
+        <h2>Foto da Estudante</h2>
+        <div class="painel-corpo foto-conteudo">
+          <img src="imagens/perfil.jpeg" alt="Foto de Michelle Amorim" width="180" height="180">
+        </div>
       </section>
     </div>
 
-    <section class="destaques-secao" aria-labelledby="titulo-destaques">
-      <div class="destaques-cabecalho"><div><span class="indicador-secao">03 / Empresas que fazem a diferença</span><h2 id="titulo-destaques">Associados em destaque</h2><p>Empresas dos níveis prata e ouro, selecionadas aleatoriamente a cada visita.</p></div><a class="link-diretorio" href="diretorio.html">Ver diretório completo <span aria-hidden="true">→</span></a></div>
-      <p id="status-destaques" class="status" role="status" aria-live="polite">Carregando associados em destaque...</p>
-      <div id="destaques" class="destaques-grid"></div>
-    </section>
-
-    <section class="convite-final" aria-labelledby="titulo-convite">
-      <div><span class="indicador-secao">Crescemos juntos</span><h2 id="titulo-convite">Sua empresa pode ir mais longe.</h2><p>Participe de uma comunidade que valoriza o empreendedorismo, as conexões e a colaboração.</p></div>
-      <a class="botao-cta" href="associar.html">Conhecer a associação <span aria-hidden="true">→</span></a>
+    <section class="painel certificados" aria-labelledby="titulo-cursos">
+      <h2 id="titulo-cursos">Cursos de Certificação Web</h2>
+      <div class="painel-corpo">
+        <div class="filtros" role="group" aria-label="Filtrar cursos por área">
+          <button type="button" data-filtro="Todos" class="filtro ativo" aria-pressed="true">Todos</button>
+          <button type="button" data-filtro="CSE" class="filtro" aria-pressed="false">CSE</button>
+          <button type="button" data-filtro="WDD" class="filtro" aria-pressed="false">WDD</button>
+        </div>
+        <div id="lista-cursos" class="lista-cursos" aria-live="polite"></div>
+        <p class="creditos" id="total-creditos" aria-live="polite"></p>
+        <p class="legenda"><span class="bolinha concluido"></span> Concluído <span class="bolinha pendente"></span> Em andamento / pendente</p>
+      </div>
     </section>
   </main>
 
-  <footer class="rodape">
-    <div class="rodape-grid">
-      <div><h2>Câmara de Comércio de São Bernardo do Campo</h2><p>São Bernardo do Campo, São Paulo, Brasil</p><p class="nota">Projeto educacional fictício, sem vínculo com uma câmara real.</p></div>
-      <div><h2>Contato do projeto</h2><p>Atendimento demonstrativo</p><p>Para fins acadêmicos WDD 231</p></div>
-      <div><h2>Sobre o desenvolvimento</h2><p>Michelle Barbosa Rodrigues Amorim</p><p>WDD 231 · Desenvolvimento Web</p><p><a href="../index.html">Voltar ao portfólio</a></p></div>
-    </div>
-    <div class="copyright"><p>© <span id="anoAtual"></span> Câmara de Comércio de São Bernardo do Campo · Michelle Barbosa Rodrigues Amorim · WDD 231</p><p id="ultimaModificacao"></p></div>
+  <footer>
+    <nav class="redes-sociais" aria-label="Redes sociais">
+    
+      <a href="https://github.com/michellebrod/wdd231" target="_blank" rel="noopener noreferrer" aria-label="GitHub (perfil pessoal)"><img src="imagens/github.svg" width="34" height="34" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/michelle-barbosa-rodrigues-amorim-a232bb17/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (perfil pessoal)"><img src="imagens/linkedin.svg" width="34" height="34" alt="LinkedIn"></a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube (configurar perfil pessoal)"><img src="imagens/youtube.svg" width="34" height="34" alt="YouTube"></a>
+    </nav>
+    <p>© <span id="anoAtual"></span> · Michelle Amorim · São Paulo, Brasil</p>
+    <p id="ultimaModificacao"></p>
   </footer>
 </body>
 </html>
