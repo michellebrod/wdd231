@@ -26,3 +26,21 @@ linksModais.forEach(link => {
     });
 
 });
+
+const botoesFechar = document.querySelectorAll(
+    "[data-fechar-modal]"
+);
+
+botoesFechar.forEach(botao => {
+
+    botao.addEventListener("click", () => {
+
+        const modal = botao.closest("dialog");
+
+        if (modal instanceof HTMLDialogElement && modal.open) {
+            modal.close();
+        }
+
+    });
+
+});

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -99,21 +100,15 @@
     <ul class="menu-principal" id="menu-principal">
 
       <li>
-        <a href="index.html">
-          Página Inicial
-        </a>
+        <a href="index.html">Página Inicial</a>
       </li>
 
       <li>
-        <a href="sobre.html">
-          Sobre
-        </a>
+        <a href="sobre.html">Sobre</a>
       </li>
 
       <li>
-        <a href="diretorio.html">
-          Diretório
-        </a>
+        <a href="diretorio.html">Diretório</a>
       </li>
 
       <li>
@@ -128,7 +123,9 @@
 
   <main id="conteudo" class="pagina-associacao">
 
-    <section class="intro" aria-labelledby="titulo-associacao">
+    <section
+      class="intro"
+      aria-labelledby="titulo-associacao">
 
       <p class="eyebrow">
         Juntos fortalecemos o comércio local
@@ -147,9 +144,9 @@
     </section>
 
     <p class="aviso">
-      Este é um projeto acadêmico fictício. O formulário
-      demonstra uma solicitação de associação, sem realizar
-      cadastro real ou cobrança.
+      Este é um projeto acadêmico fictício.
+      O formulário demonstra uma solicitação de associação,
+      sem realizar cadastro real ou cobrança.
     </p>
 
     <div class="associacao-layout">
@@ -176,7 +173,6 @@
           class="formulario-associacao">
 
           <label for="primeiro-nome">
-
             Primeiro nome *
 
             <input
@@ -186,11 +182,9 @@
               title="Informe seu primeiro nome"
               autocomplete="given-name"
               required>
-
           </label>
 
           <label for="sobrenome">
-
             Sobrenome *
 
             <input
@@ -200,30 +194,26 @@
               title="Informe seu sobrenome"
               autocomplete="family-name"
               required>
-
           </label>
 
           <label for="cargo">
-
             Cargo na organização
 
             <input
               type="text"
               id="cargo"
               name="cargo"
-              title="Use pelo menos 7 caracteres, apenas letras, hífens e espaços."
+              title="Use pelo menos 7 caracteres, apenas letras, espaços e hífens."
               autocomplete="organization-title"
               pattern="[A-Za-zÀ-ÖØ-öø-ÿ -]{7,}">
 
             <small>
-              Mínimo de 7 caracteres, somente letras,
-              espaços e hífens.
+              Mínimo de 7 caracteres.
+              Utilize somente letras, espaços e hífens.
             </small>
-
           </label>
 
           <label for="email">
-
             E-mail *
 
             <input
@@ -234,11 +224,9 @@
               autocomplete="email"
               placeholder="exemplo@email.com"
               required>
-
           </label>
 
           <label for="telefone">
-
             Número de celular *
 
             <input
@@ -250,11 +238,9 @@
               inputmode="tel"
               placeholder="(11) 99999-9999"
               required>
-
           </label>
 
           <label for="organizacao">
-
             Nome da empresa ou organização *
 
             <input
@@ -264,11 +250,9 @@
               title="Informe o nome da empresa ou organização"
               autocomplete="organization"
               required>
-
           </label>
 
           <label for="nivel">
-
             Nível de associação *
 
             <select
@@ -298,11 +282,9 @@
               </option>
 
             </select>
-
           </label>
 
           <label for="descricao">
-
             Descrição da empresa ou atividade
 
             <textarea
@@ -311,7 +293,6 @@
               title="Descreva a atividade da sua empresa"
               rows="5"
               placeholder="Conte um pouco sobre sua organização..."></textarea>
-
           </label>
 
           <input
@@ -322,9 +303,7 @@
           <button
             type="submit"
             class="botao-enviar">
-
             Enviar solicitação de associação
-
           </button>
 
         </form>
@@ -361,9 +340,7 @@
               href="#modal-np"
               data-modal="modal-np"
               aria-label="Conhecer benefícios da Associação NP">
-
               Conhecer benefícios
-
             </a>
 
           </article>
@@ -384,9 +361,7 @@
               href="#modal-bronze"
               data-modal="modal-bronze"
               aria-label="Conhecer benefícios da Associação Bronze">
-
               Conhecer benefícios
-
             </a>
 
           </article>
@@ -407,9 +382,7 @@
               href="#modal-prata"
               data-modal="modal-prata"
               aria-label="Conhecer benefícios da Associação Prata">
-
               Conhecer benefícios
-
             </a>
 
           </article>
@@ -430,9 +403,7 @@
               href="#modal-ouro"
               data-modal="modal-ouro"
               aria-label="Conhecer benefícios da Associação Ouro">
-
               Conhecer benefícios
-
             </a>
 
           </article>
@@ -464,11 +435,12 @@
         <li>Oportunidades de networking.</li>
       </ul>
 
-      <form method="dialog">
-        <button class="fechar-modal" type="submit">
-          Fechar
-        </button>
-      </form>
+      <button
+        class="fechar-modal"
+        type="button"
+        data-fechar-modal>
+        Fechar
+      </button>
 
     </dialog>
 
@@ -492,11 +464,12 @@
         <li>Acesso a oportunidades e comunicados comerciais.</li>
       </ul>
 
-      <form method="dialog">
-        <button class="fechar-modal" type="submit">
-          Fechar
-        </button>
-      </form>
+      <button
+        class="fechar-modal"
+        type="button"
+        data-fechar-modal>
+        Fechar
+      </button>
 
     </dialog>
 
@@ -522,11 +495,12 @@
         <li>Participação nos destaques da página inicial.</li>
       </ul>
 
-      <form method="dialog">
-        <button class="fechar-modal" type="submit">
-          Fechar
-        </button>
-      </form>
+      <button
+        class="fechar-modal"
+        type="button"
+        data-fechar-modal>
+        Fechar
+      </button>
 
     </dialog>
 
@@ -553,11 +527,12 @@
         <li>Benefícios ampliados em eventos e capacitações.</li>
       </ul>
 
-      <form method="dialog">
-        <button class="fechar-modal" type="submit">
-          Fechar
-        </button>
-      </form>
+      <button
+        class="fechar-modal"
+        type="button"
+        data-fechar-modal>
+        Fechar
+      </button>
 
     </dialog>
 
@@ -568,7 +543,6 @@
     <div class="rodape-grid">
 
       <div>
-
         <h2>
           Câmara de Comércio de São Bernardo do Campo
         </h2>
@@ -581,26 +555,16 @@
           Projeto educacional fictício,
           sem vínculo com uma câmara real.
         </p>
-
       </div>
 
       <div>
-
-        <h2>
-          Contato do projeto
-        </h2>
-
+        <h2>Contato do projeto</h2>
         <p>Atendimento demonstrativo</p>
-
         <p>Para fins acadêmicos WDD 231</p>
-
       </div>
 
       <div>
-
-        <h2>
-          Sobre o desenvolvimento
-        </h2>
+        <h2>Sobre o desenvolvimento</h2>
 
         <p>
           Michelle Barbosa Rodrigues Amorim
@@ -615,7 +579,6 @@
             Voltar ao portfólio
           </a>
         </p>
-
       </div>
 
     </div>
