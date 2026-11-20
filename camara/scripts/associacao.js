@@ -16,7 +16,6 @@ linksModais.forEach(link => {
         evento.preventDefault();
 
         const idModal = link.dataset.modal;
-
         const modal = document.getElementById(idModal);
 
         if (modal instanceof HTMLDialogElement && !modal.open) {
