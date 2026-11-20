@@ -1,0 +1,639 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Solicite sua associação à Câmara de Comércio de São Bernardo do Campo e conheça os benefícios de cada nível. Projeto acadêmico WDD 231.">
+
+  <meta name="author" content="Michelle Barbosa Rodrigues Amorim">
+  <meta name="theme-color" content="#15334a">
+
+  <title>Associe-se | Câmara de Comércio de São Bernardo do Campo</title>
+
+  <meta
+    property="og:title"
+    content="Associe-se | Câmara de Comércio de São Bernardo do Campo">
+
+  <meta
+    property="og:description"
+    content="Conheça os níveis e benefícios de associação à nossa Câmara de Comércio. Projeto acadêmico WDD 231.">
+
+  <meta
+    property="og:image"
+    content="https://michellebrod.github.io/wdd231/camara/imagens/compartilhamento.webp">
+
+  <meta
+    property="og:url"
+    content="https://michellebrod.github.io/wdd231/camara/associacao.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/telas-pequenas.css">
+  <link rel="stylesheet" href="estilos/telas-grandes.css">
+
+  <script src="scripts/navegacao.js" defer></script>
+  <script src="scripts/datas.js" defer></script>
+  <script src="scripts/associacao.js" defer></script>
+
+</head>
+
+<body>
+
+  <a class="pular" href="#conteudo">
+    Ir para o conteúdo
+  </a>
+
+  <header class="cabecalho">
+
+    <div class="topo">
+
+      <a
+        href="index.html"
+        class="marca"
+        aria-label="Página inicial da Câmara de Comércio de São Bernardo do Campo">
+
+        <img
+          src="imagens/logo.svg"
+          alt=""
+          width="58"
+          height="58">
+
+        <div>
+          <strong>Câmara de Comércio</strong>
+          <span>São Bernardo do Campo</span>
+        </div>
+
+      </a>
+
+      <button
+        id="botao-menu"
+        class="botao-menu"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-controls="menu-principal"
+        aria-expanded="false">
+        ☰
+      </button>
+
+    </div>
+
+  </header>
+
+  <nav class="navegacao" aria-label="Navegação principal">
+
+    <ul class="menu-principal" id="menu-principal">
+
+      <li>
+        <a href="index.html">
+          Página Inicial
+        </a>
+      </li>
+
+      <li>
+        <a href="sobre.html">
+          Sobre
+        </a>
+      </li>
+
+      <li>
+        <a href="diretorio.html">
+          Diretório
+        </a>
+      </li>
+
+      <li>
+        <a href="associacao.html" aria-current="page">
+          Associe-se
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+  <main id="conteudo" class="pagina-associacao">
+
+    <section class="intro" aria-labelledby="titulo-associacao">
+
+      <p class="eyebrow">
+        Juntos fortalecemos o comércio local
+      </p>
+
+      <h1 id="titulo-associacao">
+        Associe-se à Câmara
+      </h1>
+
+      <p>
+        Faça parte de uma comunidade que conecta empresas,
+        promove oportunidades e fortalece o empreendedorismo
+        em São Bernardo do Campo.
+      </p>
+
+    </section>
+
+    <p class="aviso">
+      Este é um projeto acadêmico fictício. O formulário
+      demonstra uma solicitação de associação, sem realizar
+      cadastro real ou cobrança.
+    </p>
+
+    <div class="associacao-layout">
+
+      <section
+        class="formulario-painel"
+        aria-labelledby="titulo-formulario">
+
+        <h2 id="titulo-formulario">
+          Solicitação de associação
+        </h2>
+
+        <p>
+          Preencha os campos abaixo para solicitar sua associação.
+        </p>
+
+        <p class="campos-obrigatorios">
+          * Campos obrigatórios.
+        </p>
+
+        <form
+          action="agradecimento.html"
+          method="get"
+          class="formulario-associacao">
+
+          <label for="primeiro-nome">
+
+            Primeiro nome *
+
+            <input
+              type="text"
+              id="primeiro-nome"
+              name="primeiroNome"
+              title="Informe seu primeiro nome"
+              autocomplete="given-name"
+              required>
+
+          </label>
+
+          <label for="sobrenome">
+
+            Sobrenome *
+
+            <input
+              type="text"
+              id="sobrenome"
+              name="sobrenome"
+              title="Informe seu sobrenome"
+              autocomplete="family-name"
+              required>
+
+          </label>
+
+          <label for="cargo">
+
+            Cargo na organização
+
+            <input
+              type="text"
+              id="cargo"
+              name="cargo"
+              title="Use pelo menos 7 caracteres, apenas letras, hífens e espaços."
+              autocomplete="organization-title"
+              pattern="[A-Za-zÀ-ÖØ-öø-ÿ -]{7,}">
+
+            <small>
+              Mínimo de 7 caracteres, somente letras,
+              espaços e hífens.
+            </small>
+
+          </label>
+
+          <label for="email">
+
+            E-mail *
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              title="Informe seu endereço de e-mail"
+              autocomplete="email"
+              placeholder="exemplo@email.com"
+              required>
+
+          </label>
+
+          <label for="telefone">
+
+            Número de celular *
+
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              title="Informe seu número de celular com DDD"
+              autocomplete="tel"
+              inputmode="tel"
+              placeholder="(11) 99999-9999"
+              required>
+
+          </label>
+
+          <label for="organizacao">
+
+            Nome da empresa ou organização *
+
+            <input
+              type="text"
+              id="organizacao"
+              name="organizacao"
+              title="Informe o nome da empresa ou organização"
+              autocomplete="organization"
+              required>
+
+          </label>
+
+          <label for="nivel">
+
+            Nível de associação *
+
+            <select
+              id="nivel"
+              name="nivel"
+              title="Selecione o nível de associação"
+              required>
+
+              <option value="" disabled selected>
+                Selecione uma opção
+              </option>
+
+              <option value="np">
+                NP — Sem fins lucrativos
+              </option>
+
+              <option value="bronze">
+                Bronze
+              </option>
+
+              <option value="silver">
+                Prata
+              </option>
+
+              <option value="gold">
+                Ouro
+              </option>
+
+            </select>
+
+          </label>
+
+          <label for="descricao">
+
+            Descrição da empresa ou atividade
+
+            <textarea
+              id="descricao"
+              name="descricao"
+              title="Descreva a atividade da sua empresa"
+              rows="5"
+              placeholder="Conte um pouco sobre sua organização..."></textarea>
+
+          </label>
+
+          <input
+            type="hidden"
+            id="timestamp"
+            name="timestamp">
+
+          <button
+            type="submit"
+            class="botao-enviar">
+
+            Enviar solicitação de associação
+
+          </button>
+
+        </form>
+
+      </section>
+
+      <aside
+        class="associacao-beneficios"
+        aria-labelledby="titulo-beneficios">
+
+        <h2 id="titulo-beneficios">
+          Níveis de associação
+        </h2>
+
+        <p>
+          Conheça as vantagens disponíveis em cada modalidade.
+        </p>
+
+        <div class="niveis-grid">
+
+          <article class="nivel-cartao cartao-np">
+
+            <span class="nivel-etiqueta">
+              Gratuito
+            </span>
+
+            <h3>Associação NP</h3>
+
+            <p>
+              Para organizações sem fins lucrativos.
+            </p>
+
+            <a
+              href="#modal-np"
+              data-modal="modal-np"
+              aria-label="Conhecer benefícios da Associação NP">
+
+              Conhecer benefícios
+
+            </a>
+
+          </article>
+
+          <article class="nivel-cartao cartao-bronze">
+
+            <span class="nivel-etiqueta">
+              Essencial
+            </span>
+
+            <h3>Associação Bronze</h3>
+
+            <p>
+              Visibilidade e oportunidades de networking.
+            </p>
+
+            <a
+              href="#modal-bronze"
+              data-modal="modal-bronze"
+              aria-label="Conhecer benefícios da Associação Bronze">
+
+              Conhecer benefícios
+
+            </a>
+
+          </article>
+
+          <article class="nivel-cartao cartao-prata">
+
+            <span class="nivel-etiqueta">
+              Crescimento
+            </span>
+
+            <h3>Associação Prata</h3>
+
+            <p>
+              Divulgação, capacitações e benefícios especiais.
+            </p>
+
+            <a
+              href="#modal-prata"
+              data-modal="modal-prata"
+              aria-label="Conhecer benefícios da Associação Prata">
+
+              Conhecer benefícios
+
+            </a>
+
+          </article>
+
+          <article class="nivel-cartao cartao-ouro">
+
+            <span class="nivel-etiqueta">
+              Premium
+            </span>
+
+            <h3>Associação Ouro</h3>
+
+            <p>
+              Maior destaque e oportunidades exclusivas.
+            </p>
+
+            <a
+              href="#modal-ouro"
+              data-modal="modal-ouro"
+              aria-label="Conhecer benefícios da Associação Ouro">
+
+              Conhecer benefícios
+
+            </a>
+
+          </article>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+    <dialog
+      id="modal-np"
+      class="modal-associacao"
+      aria-labelledby="titulo-np">
+
+      <h2 id="titulo-np">
+        Associação NP
+      </h2>
+
+      <p>
+        Modalidade sem taxa para organizações
+        sem fins lucrativos.
+      </p>
+
+      <ul>
+        <li>Inclusão no diretório de associados.</li>
+        <li>Informações e comunicados da comunidade.</li>
+        <li>Participação em eventos comunitários.</li>
+        <li>Oportunidades de networking.</li>
+      </ul>
+
+      <form method="dialog">
+        <button class="fechar-modal" type="submit">
+          Fechar
+        </button>
+      </form>
+
+    </dialog>
+
+    <dialog
+      id="modal-bronze"
+      class="modal-associacao"
+      aria-labelledby="titulo-bronze">
+
+      <h2 id="titulo-bronze">
+        Associação Bronze
+      </h2>
+
+      <p>
+        Benefícios iniciais para negócios locais.
+      </p>
+
+      <ul>
+        <li>Inclusão no diretório de empresas.</li>
+        <li>Divulgação básica da organização.</li>
+        <li>Participação em eventos de networking.</li>
+        <li>Acesso a oportunidades e comunicados comerciais.</li>
+      </ul>
+
+      <form method="dialog">
+        <button class="fechar-modal" type="submit">
+          Fechar
+        </button>
+      </form>
+
+    </dialog>
+
+    <dialog
+      id="modal-prata"
+      class="modal-associacao"
+      aria-labelledby="titulo-prata">
+
+      <h2 id="titulo-prata">
+        Associação Prata
+      </h2>
+
+      <p>
+        Mais oportunidades de divulgação
+        e desenvolvimento.
+      </p>
+
+      <ul>
+        <li>Todos os benefícios da Associação Bronze.</li>
+        <li>Participação em treinamentos e oficinas.</li>
+        <li>Descontos em eventos selecionados.</li>
+        <li>Divulgação ampliada da empresa.</li>
+        <li>Participação nos destaques da página inicial.</li>
+      </ul>
+
+      <form method="dialog">
+        <button class="fechar-modal" type="submit">
+          Fechar
+        </button>
+      </form>
+
+    </dialog>
+
+    <dialog
+      id="modal-ouro"
+      class="modal-associacao"
+      aria-labelledby="titulo-ouro">
+
+      <h2 id="titulo-ouro">
+        Associação Ouro
+      </h2>
+
+      <p>
+        Modalidade com maior visibilidade
+        e benefícios.
+      </p>
+
+      <ul>
+        <li>Todos os benefícios da Associação Prata.</li>
+        <li>Maior visibilidade nos destaques da Câmara.</li>
+        <li>Oportunidades especiais de patrocínio.</li>
+        <li>Prioridade em ações de publicidade.</li>
+        <li>Convites para encontros empresariais exclusivos.</li>
+        <li>Benefícios ampliados em eventos e capacitações.</li>
+      </ul>
+
+      <form method="dialog">
+        <button class="fechar-modal" type="submit">
+          Fechar
+        </button>
+      </form>
+
+    </dialog>
+
+  </main>
+
+  <footer class="rodape">
+
+    <div class="rodape-grid">
+
+      <div>
+
+        <h2>
+          Câmara de Comércio de São Bernardo do Campo
+        </h2>
+
+        <p>
+          São Bernardo do Campo, São Paulo, Brasil
+        </p>
+
+        <p class="nota">
+          Projeto educacional fictício,
+          sem vínculo com uma câmara real.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h2>
+          Contato do projeto
+        </h2>
+
+        <p>Atendimento demonstrativo</p>
+
+        <p>Para fins acadêmicos WDD 231</p>
+
+      </div>
+
+      <div>
+
+        <h2>
+          Sobre o desenvolvimento
+        </h2>
+
+        <p>
+          Michelle Barbosa Rodrigues Amorim
+        </p>
+
+        <p>
+          WDD 231 · Desenvolvimento Web
+        </p>
+
+        <p>
+          <a href="../index.html">
+            Voltar ao portfólio
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+
+      <p>
+        © <span id="anoAtual"></span>
+        Câmara de Comércio de São Bernardo do Campo ·
+        Michelle Barbosa Rodrigues Amorim · WDD 231
+      </p>
+
+      <p id="ultimaModificacao"></p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
