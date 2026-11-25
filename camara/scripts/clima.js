@@ -1,5 +1,5 @@
-// Consulte clima-config.example.js para configurar a chave localmente.
-const CHAVE_OPENWEATHER = globalThis.CONFIG_CLIMA?.chaveOpenWeather ?? '';
+// A chave fica pública porque a consulta é feita diretamente pelo navegador.
+const CHAVE_OPENWEATHER = '07248312a3d13536abf9445bd437e145';
 const LATITUDE = -23.6939;
 const LONGITUDE = -46.5650;
 const URL_OPENWEATHER = 'https://api.openweathermap.org/data/2.5';
@@ -126,7 +126,7 @@ async function carregarClima() {
   if (!CHAVE_OPENWEATHER || CHAVE_OPENWEATHER === 'COLOQUE_SUA_CHAVE_AQUI') {
     areaAtual.replaceChildren(textoElemento('p', 'Informações do tempo indisponíveis no momento.'));
     areaPrevisao.replaceChildren(textoElemento('p', 'Previsão indisponível no momento.'));
-    console.warn('Configure a OpenWeatherMap em scripts/clima-config.local.js.');
+    console.warn('Configure a chave da OpenWeatherMap em scripts/clima.js.');
     return;
   }
 
