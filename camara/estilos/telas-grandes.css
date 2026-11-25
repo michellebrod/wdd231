@@ -151,3 +151,94 @@
         padding: 1.6rem;
     }
 }
+
+/* ==========================================
+   S05 - GRID TEMPLATE AREAS
+   TELAS MÉDIAS: 641px A 1024px
+========================================== */
+
+@media (min-width: 40.0625rem) and (max-width: 64rem) {
+
+    .lugares-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        grid-template-areas:
+            "a a"
+            "b c"
+            "d e"
+            "f g"
+            "h h";
+
+        gap: 1.2rem;
+    }
+
+    .lugar-cartao {
+        padding: 1.3rem;
+    }
+}
+
+/* ==========================================
+   S05 - GRID TEMPLATE AREAS
+   TELAS GRANDES: 1025px OU MAIS
+========================================== */
+
+@media (min-width: 64.0625rem) {
+
+    .lugares-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        grid-template-areas:
+            "a a b c"
+            "a a d e"
+            "f g h h";
+
+        gap: 1.3rem;
+    }
+
+    .lugar-cartao {
+        padding: 1.4rem;
+    }
+
+    .area-a figure {
+        flex: 1;
+        display: flex;
+        min-height: 220px;
+    }
+
+    .area-a img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* ==========================================
+   S05 - EFEITOS DE IMAGEM
+   APENAS TABLETS E DESKTOPS COM HOVER
+========================================== */
+
+@media (min-width: 40.0625rem) and (hover: hover) {
+
+    .lugar-cartao img {
+        transition:
+            transform .35s ease,
+            filter .35s ease;
+    }
+
+    .lugar-cartao:hover img {
+        transform: scale(1.05);
+        filter: saturate(1.15);
+    }
+}
+
+/* ==========================================
+   S05 - ACESSIBILIDADE
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .lugar-cartao img {
+        transition: none;
+    }
+}

@@ -8,20 +8,23 @@
 
   <meta
     name="description"
-    content="Conheça São Bernardo do Campo, sua história, cultura e desenvolvimento econômico no projeto da Câmara de Comércio.">
+    content="Descubra São Bernardo do Campo: parques, cultura, lazer, pontos turísticos e informações sobre a cidade. Projeto WDD 231.">
 
-  <meta name="author" content="Michelle Barbosa Rodrigues Amorim">
+  <meta
+    name="author"
+    content="Michelle Barbosa Rodrigues Amorim">
+
   <meta name="theme-color" content="#15334a">
 
-  <title>Sobre a Região | Câmara de Comércio de São Bernardo do Campo</title>
+  <title>Descubra São Bernardo | Câmara de Comércio</title>
 
   <meta
     property="og:title"
-    content="Sobre a Região | Câmara de Comércio de São Bernardo do Campo">
+    content="Descubra São Bernardo do Campo | Câmara de Comércio">
 
   <meta
     property="og:description"
-    content="Conheça a história, a cultura e as oportunidades de São Bernardo do Campo. Projeto acadêmico WDD 231.">
+    content="Conheça oito lugares de interesse em São Bernardo do Campo, entre parques, cultura e atrações para toda a família.">
 
   <meta
     property="og:image"
@@ -40,7 +43,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="estilos/normalize.css">
@@ -49,7 +52,7 @@
 
   <script src="scripts/navegacao.js" defer></script>
   <script src="scripts/datas.js" defer></script>
-
+  <script src="scripts/sobre.js" type="module"></script>
 </head>
 
 <body>
@@ -126,55 +129,137 @@
 
   </nav>
 
-  <main id="conteudo">
+  <main id="conteudo" class="pagina-descubra">
 
-    <section class="intro">
+    <section class="intro" aria-labelledby="titulo-descubra">
 
       <p class="eyebrow">
-        Conheça nossa cidade
+        Cultura, história, natureza e oportunidades
       </p>
 
-      <h1>
-        Sobre São Bernardo do Campo
+      <h1 id="titulo-descubra">
+        Descubra São Bernardo do Campo
       </h1>
 
       <p>
-        São Bernardo do Campo é uma cidade conhecida
-        por sua história, cultura e importância
-        para o desenvolvimento econômico do ABC Paulista.
+        Conheça os espaços que fazem de São Bernardo
+        do Campo uma cidade de cultura, lazer,
+        desenvolvimento e oportunidades.
       </p>
 
     </section>
 
-    <section aria-labelledby="titulo-regiao">
+    <section
+      class="descubra-apresentacao"
+      aria-labelledby="titulo-cidade">
 
-      <h2 id="titulo-regiao">
-        Conheça a região
+      <h2 id="titulo-cidade">
+        Nossa cidade
       </h2>
 
       <p>
-        Localizada na região metropolitana de São Paulo,
-        São Bernardo do Campo possui uma forte tradição
-        industrial, comercial e cultural.
+        São Bernardo do Campo está localizada
+        na Região Metropolitana de São Paulo
+        e faz parte da região do Grande ABC.
       </p>
 
       <p>
-        Nossa Câmara de Comércio fictícia tem como objetivo
-        representar essa comunidade empresarial,
-        promovendo conexões e oportunidades
-        para os negócios locais.
+        Historicamente ligada ao desenvolvimento
+        industrial e ao setor automobilístico,
+        a cidade também reúne parques,
+        espaços culturais, atrações familiares
+        e áreas de preservação ambiental.
       </p>
 
       <p>
-        Explore o diretório para conhecer
-        algumas empresas e organizações da região.
+        Segundo o Censo Demográfico de 2022
+        do IBGE, o município possui
+        810.729 habitantes.
       </p>
 
-      <a class="link-diretorio" href="diretorio.html">
-        Conhecer o diretório de empresas
-      </a>
+      <p>
+        A diversidade de atividades econômicas
+        e opções de lazer contribui para
+        o desenvolvimento local e para
+        a qualidade de vida da população.
+      </p>
+
+      <p class="fonte-dados">
+        Fonte:
+        <a
+          href="https://www.ibge.gov.br/cidades-e-estados/sp/sao-bernardo-do-campo.html"
+          target="_blank"
+          rel="noopener noreferrer">
+          IBGE — Cidades e Estados
+        </a>
+      </p>
 
     </section>
+
+    <aside
+      class="visita-painel"
+      aria-label="Informações sobre sua última visita">
+
+      <p
+        id="mensagem-visita"
+        role="status"
+        aria-live="polite">
+        Verificando sua última visita...
+      </p>
+
+    </aside>
+
+    <section
+      class="descubra-secao"
+      aria-labelledby="titulo-lugares">
+
+      <div class="descubra-cabecalho">
+
+        <h2 id="titulo-lugares">
+          Lugares para conhecer
+        </h2>
+
+        <p>
+          Explore oito pontos de interesse
+          em São Bernardo do Campo.
+        </p>
+
+      </div>
+
+      <div
+        id="grade-lugares"
+        class="lugares-grid">
+      </div>
+
+    </section>
+
+    <dialog
+      id="modal-lugar"
+      class="modal-lugar"
+      aria-labelledby="modal-lugar-titulo">
+
+      <h2 id="modal-lugar-titulo">
+        Informações do local
+      </h2>
+
+      <p id="modal-lugar-descricao"></p>
+
+      <p id="modal-lugar-endereco"></p>
+
+      <button
+        type="button"
+        id="fechar-modal-lugar"
+        class="botao-fechar-lugar">
+        Fechar
+      </button>
+
+    </dialog>
+
+    <p class="aviso">
+      Esta é uma página de um projeto acadêmico.
+      Consulte os canais oficiais das atrações
+      para confirmar horários e condições de visita.
+    </p>
 
   </main>
 
@@ -183,7 +268,6 @@
     <div class="rodape-grid">
 
       <div>
-
         <h2>
           Câmara de Comércio de São Bernardo do Campo
         </h2>
@@ -196,41 +280,25 @@
           Projeto educacional fictício,
           sem vínculo com uma câmara real.
         </p>
-
       </div>
 
       <div>
-
-        <h2>
-          Contato do projeto
-        </h2>
-
+        <h2>Contato do projeto</h2>
         <p>Atendimento demonstrativo</p>
-
         <p>Para fins acadêmicos WDD 231</p>
-
       </div>
 
       <div>
+        <h2>Sobre o desenvolvimento</h2>
 
-        <h2>
-          Sobre o desenvolvimento
-        </h2>
-
-        <p>
-          Michelle Barbosa Rodrigues Amorim
-        </p>
-
-        <p>
-          WDD 231 · Desenvolvimento Web
-        </p>
+        <p>Michelle Barbosa Rodrigues Amorim</p>
+        <p>WDD 231 · Desenvolvimento Web</p>
 
         <p>
           <a href="../index.html">
             Voltar ao portfólio
           </a>
         </p>
-
       </div>
 
     </div>

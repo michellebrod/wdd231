@@ -1058,3 +1058,242 @@ main {
         transition: none !important;
     }
 }
+
+/* ==========================================
+   S05 - PÁGINA SOBRE / DESCUBRA
+   MOBILE FIRST - 320px A 640px
+========================================== */
+
+.pagina-descubra {
+    width: 100%;
+}
+
+.descubra-apresentacao {
+    background-color: var(--branco);
+    border: 1px solid var(--cinza);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.descubra-apresentacao h2 {
+    color: var(--azul);
+    margin-bottom: .8rem;
+}
+
+.descubra-apresentacao p {
+    line-height: 1.7;
+}
+
+.fonte-dados {
+    font-size: .85rem;
+}
+
+.fonte-dados a {
+    color: #115577;
+}
+
+/* Mensagem da última visita */
+
+.visita-painel {
+    background-color: #e7f0f3;
+    color: var(--azul-escuro);
+    border-left: 5px solid var(--verde);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.visita-painel p {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* Galeria */
+
+.descubra-secao {
+    margin: 2rem 0;
+}
+
+.descubra-cabecalho {
+    margin-bottom: 1.3rem;
+}
+
+.descubra-cabecalho h2 {
+    color: var(--azul);
+    font-size: 1.7rem;
+    margin-bottom: .5rem;
+}
+
+.descubra-cabecalho p {
+    color: #425663;
+}
+
+/* Áreas nomeadas: mobile */
+
+.lugares-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h";
+    gap: 1rem;
+}
+
+.lugar-cartao {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    background-color: var(--branco);
+    border: 1px solid var(--cinza);
+    border-radius: 12px;
+    padding: 1.1rem;
+    box-shadow: 0 5px 15px #132e3b12;
+}
+
+.area-a {
+    grid-area: a;
+}
+
+.area-b {
+    grid-area: b;
+}
+
+.area-c {
+    grid-area: c;
+}
+
+.area-d {
+    grid-area: d;
+}
+
+.area-e {
+    grid-area: e;
+}
+
+.area-f {
+    grid-area: f;
+}
+
+.area-g {
+    grid-area: g;
+}
+
+.area-h {
+    grid-area: h;
+}
+
+/* Elementos dos cartões */
+
+.lugar-cartao h2 {
+    color: var(--azul);
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.lugar-cartao figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.lugar-cartao img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    background-color: #e9eef1;
+}
+
+.lugar-cartao address {
+    font-style: normal;
+    color: #405765;
+    font-size: .88rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.lugar-cartao p {
+    color: var(--texto);
+    line-height: 1.6;
+    font-size: .93rem;
+    margin: 0;
+}
+
+.botao-saiba-mais {
+    margin-top: auto;
+    align-self: flex-start;
+    border: 2px solid var(--azul);
+    border-radius: 7px;
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: .7rem 1rem;
+    min-height: 44px;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.botao-saiba-mais:hover {
+    background-color: var(--azul-escuro);
+}
+
+/* Modal */
+
+.modal-lugar {
+    width: calc(100% - 2rem);
+    max-width: 540px;
+    max-height: 85vh;
+    overflow-y: auto;
+    margin: auto;
+    padding: 1.6rem;
+    border: 1px solid var(--cinza);
+    border-radius: 12px;
+    background-color: var(--branco);
+    color: var(--texto);
+}
+
+.modal-lugar::backdrop {
+    background-color: #081e2ccc;
+}
+
+.modal-lugar h2 {
+    color: var(--azul);
+}
+
+.modal-lugar p {
+    line-height: 1.6;
+}
+
+.botao-fechar-lugar {
+    display: block;
+    margin-left: auto;
+    margin-top: 1.2rem;
+    padding: .7rem 1rem;
+    min-height: 44px;
+    background-color: var(--azul);
+    color: var(--branco);
+    border: 0;
+    border-radius: 7px;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* Acessibilidade */
+
+.botao-saiba-mais:focus-visible,
+.botao-fechar-lugar:focus-visible {
+    outline: 3px solid var(--foco);
+    outline-offset: 3px;
+}
