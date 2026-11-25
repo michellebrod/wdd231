@@ -1,8 +1,9 @@
-// S03 - Substitua o texto abaixo pela sua chave válida da OpenWeatherMap.
-// Atenção: em um site estático, a chave usada no frontend fica pública.
-const CHAVE_OPENWEATHER = 'COLOQUE_SUA_CHAVE_AQUI';
+// Consulte clima-config.example.js para configurar a chave localmente.
+const CHAVE_OPENWEATHER = globalThis.CONFIG_CLIMA?.chaveOpenWeather ?? '';
 const LATITUDE = -23.6939;
 const LONGITUDE = -46.5650;
+const URL_OPENWEATHER = 'https://api.openweathermap.org/data/2.5';
+const LIMITE_CONSULTA_MS = 10000;
 
 const areaAtual = document.querySelector('#clima-atual');
 const areaPrevisao = document.querySelector('#previsao-tres-dias');
@@ -14,12 +15,28 @@ function textoElemento(tag, texto, classe = '') {
   return el;
 }
 
-async function obterJSON(url) {
-  const resposta = await fetch(url);
-  if (!resposta.ok) {
-    throw new Error(`OpenWeatherMap respondeu HTTP ${resposta.status}`);
+async function obterJSON(recurso) {
+  const parametros = new URLSearchParams({
+    lat: String(LATITUDE),
+    lon: String(LONGITUDE),
+    appid: CHAVE_OPENWEATHER,
+    units: 'metric',
+    lang: 'pt_br'
+  });
+  const controlador = new AbortController();
+  const limite = setTimeout(() => controlador.abort(), LIMITE_CONSULTA_MS);
+
+  try {
+    const resposta = await fetch(`${URL_OPENWEATHER}/${recurso}?${parametros}`, {
+      signal: controlador.signal
+    });
+    if (!resposta.ok) {
+      throw new Error(`OpenWeatherMap respondeu HTTP ${resposta.status}`);
+    }
+    return await resposta.json();
+  } finally {
+    clearTimeout(limite);
   }
-  return resposta.json();
 }
 
 function formatarDia(iso) {
@@ -35,6 +52,10 @@ function horaLocalCidade(unixSegundos, deslocamentoSegundos) {
 }
 
 function mostrarTempoAtual(dados) {
+  if (!Number.isFinite(dados?.main?.temp)) {
+    throw new Error('Temperatura atual indisponível na resposta');
+  }
+
   const bloco = textoElemento('div', '', 'tempo-flex');
   const iconeCodigo = dados.weather?.[0]?.icon;
   if (iconeCodigo && /^[0-9]{2}[dn]$/.test(iconeCodigo)) {
@@ -53,11 +74,17 @@ function mostrarTempoAtual(dados) {
 }
 
 function mostrarPrevisao(dados) {
-  const fuso = dados.city?.timezone ?? -10800;
+  if (!Array.isArray(dados?.list)) {
+    throw new Error('Lista de previsão indisponível na resposta');
+  }
+
+  const fuso = Number.isFinite(dados.city?.timezone) ? dados.city.timezone : -10800;
   const hoje = dataLocalCidade(Math.floor(Date.now() / 1000), fuso);
   const porDia = new Map();
 
-  for (const item of dados.list || []) {
+  for (const item of dados.list) {
+    if (!Number.isFinite(item?.dt) || !Number.isFinite(item?.main?.temp)) continue;
+
     const dia = dataLocalCidade(item.dt, fuso);
     if (dia <= hoje) continue;
     const hora = horaLocalCidade(item.dt, fuso);
@@ -79,26 +106,44 @@ function mostrarPrevisao(dados) {
   areaPrevisao.replaceChildren(...cards);
 }
 
+async function carregarPainel(area, recurso, mostrarDados, mensagemErro) {
+  area.setAttribute('aria-busy', 'true');
+
+  try {
+    const dados = await obterJSON(recurso);
+    mostrarDados(dados);
+  } catch (erro) {
+    console.error(`Falha ao consultar ${recurso} na OpenWeatherMap:`, erro);
+    area.replaceChildren(textoElemento('p', mensagemErro));
+  } finally {
+    area.setAttribute('aria-busy', 'false');
+  }
+}
+
 async function carregarClima() {
+  if (!areaAtual || !areaPrevisao) return;
+
   if (!CHAVE_OPENWEATHER || CHAVE_OPENWEATHER === 'COLOQUE_SUA_CHAVE_AQUI') {
-    areaAtual.textContent = 'Previsão indisponível: configure a chave da OpenWeatherMap em scripts/clima.js.';
-    areaPrevisao.textContent = 'Dados ainda não disponíveis.';
+    areaAtual.replaceChildren(textoElemento('p', 'Informações do tempo indisponíveis no momento.'));
+    areaPrevisao.replaceChildren(textoElemento('p', 'Previsão indisponível no momento.'));
+    console.warn('Configure a OpenWeatherMap em scripts/clima-config.local.js.');
     return;
   }
-  const base = 'https://api.openweathermap.org/data/2.5';
-  const parametros = new URLSearchParams({lat: String(LATITUDE), lon: String(LONGITUDE), appid: CHAVE_OPENWEATHER, units: 'metric', lang: 'pt_br'});
-  try {
-    const [atual, previsao] = await Promise.all([
-      obterJSON(`${base}/weather?${parametros}`),
-      obterJSON(`${base}/forecast?${parametros}`)
-    ]);
-    mostrarTempoAtual(atual);
-    mostrarPrevisao(previsao);
-  } catch (erro) {
-    console.error('Falha ao consultar a OpenWeatherMap:', erro);
-    areaAtual.textContent = 'Não foi possível consultar o tempo agora. Verifique sua chave de API e a conexão.';
-    areaPrevisao.textContent = 'Previsão indisponível no momento.';
-  }
+
+  await Promise.all([
+    carregarPainel(
+      areaAtual,
+      'weather',
+      mostrarTempoAtual,
+      'Não foi possível consultar o tempo agora. Tente novamente mais tarde.'
+    ),
+    carregarPainel(
+      areaPrevisao,
+      'forecast',
+      mostrarPrevisao,
+      'Previsão indisponível no momento. Tente novamente mais tarde.'
+    )
+  ]);
 }
 
 carregarClima();
